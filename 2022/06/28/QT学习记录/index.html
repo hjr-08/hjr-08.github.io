@@ -502,10 +502,10 @@
 <p>各个参数的含义分别是：</p>
 <ul>
 <li>sender：指定信号的发送者；</li>
-<li>signal：指定信号函数，信号函数<strong>必须</strong>用<code>SIGNAL()</code>宏括起来；</li>
+<li>signal：指定信号函数，信号函数<strong>必须</strong>用 <code>SIGNAL()</code> 宏括起来；</li>
 <li>reveiver：指定信号的接收者；</li>
-<li>method：指定接收信号的槽函数，槽函数<strong>必须</strong>用 SLOT() 宏括起来；</li>
-<li>type 用于指定关联方式，默认的关联方式为 Qt::AutoConnection，通常不需要手动设定。</li>
+<li>method：指定接收信号的槽函数，槽函数<strong>必须</strong>用 <code>SLOT()</code> 宏括起来；</li>
+<li>type 用于指定关联方式，默认的关联方式为 <code>Qt::AutoConnection</code>，通常不需要手动设定。</li>
 </ul>
 <p>例如：</p>
 <pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">QWidget widget;
@@ -514,7 +514,7 @@ QPushButton But(&quot;按钮控件&quot;,&amp;widget);
 connect(&amp;But, SIGNAL(clicked()), &amp;widget, SLOT(close()));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
-<li><strong>Qt5 版本</strong>中，connect() 函数引入了新的用法，常用的语法格式是：</li>
+<li><strong>Qt5 版本</strong>中，<code>connect()</code> 函数引入了新的用法，常用的语法格式是：</li>
 </ul>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">QObject::connect(const QObject *sender, PointerToMemberFunction signal, const QObject *receiver, PointerToMemberFunction method, Qt::ConnectionType type &#x3D; Qt::AutoConnection)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
